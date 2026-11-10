@@ -62,7 +62,7 @@ public class World //игровая карта
         return Tiles[y, x];
     }
 
-    public bool IsInsideMap(int x, int y)
+    private bool IsInsideMap(int x, int y)
     {
         if (x < WIDTH && y < HEIGHT && x >= 0 && y >= 0)
         {
