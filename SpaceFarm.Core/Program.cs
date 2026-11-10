@@ -10,11 +10,12 @@ public class Program
     {
         SpaceFarm.World.World world = new SpaceFarm.World.World();
 
-        Console.WriteLine(world.GetTileAt(0, 0).Type);   // Grass
-        Console.WriteLine(world.GetTileAt(4, 2).Type);   // Water
-        Console.WriteLine(world.GetTileAt(14, 3).Type);  // Stone
-        Console.WriteLine(world.GetTileAt(5, 7).Type);   // Soil
-        Console.WriteLine(world.GetTileAt(19, 14).Type); // Grass
+        Console.WriteLine(world.CanMoveTo(0, 0));    // True
+        Console.WriteLine(world.CanMoveTo(4, 2));    // False — вода
+        Console.WriteLine(world.CanMoveTo(14, 3));   // False — камень
+        Console.WriteLine(world.CanMoveTo(5, 7));    // True — почва
+        Console.WriteLine(world.CanMoveTo(-1, 0));   // False
+        Console.WriteLine(world.CanMoveTo(20, 5));  // False
         
 
     }

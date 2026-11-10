@@ -61,5 +61,24 @@ public class World //игровая карта
     {
         return Tiles[y, x];
     }
+
+    public bool IsInsideMap(int x, int y)
+    {
+        if (x < WIDTH && y < HEIGHT && x >= 0 && y >= 0)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    public bool CanMoveTo(int x, int y)
+    {
+        if (IsInsideMap(x, y) && Tiles[y, x].IsWalkable)
+        {
+            return true;
+        }
+        return false;
+    }
     
 }
