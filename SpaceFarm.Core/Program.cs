@@ -1,4 +1,6 @@
+using System;
 using SpaceFarm.Entities;
+using SpaceFarm.World;
 
 namespace SpaceFarm;
 
@@ -6,22 +8,14 @@ public class Program
 {
     public static void Main()
     {
-        Player player1 = new Player("Alexandra", "woman");
+        SpaceFarm.World.World world = new SpaceFarm.World.World();
 
-        Console.WriteLine(player1.GetX());
-        Console.WriteLine(player1.GetY());
+        Console.WriteLine(world.GetTileAt(0, 0).Type);   // Grass
+        Console.WriteLine(world.GetTileAt(4, 2).Type);   // Water
+        Console.WriteLine(world.GetTileAt(14, 3).Type);  // Stone
+        Console.WriteLine(world.GetTileAt(5, 7).Type);   // Soil
+        Console.WriteLine(world.GetTileAt(19, 14).Type); // Grass
         
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Up);
-        Console.WriteLine(player1.GetX());
-        Console.WriteLine(player1.GetY());
-        
-        player1.Move(Direction.Left);
-        player1.Move(Direction.Left);
-        player1.Move(Direction.Down);
-        Console.WriteLine(player1.GetX());
-        Console.WriteLine(player1.GetY());
 
     }
 }
