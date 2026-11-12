@@ -10,8 +10,9 @@ public class Player
     private int X;
     private int Y;
     private  SpaceFarm.World.World World { get; }
+    public SpaceFarm.Inventory.Inventory Inventory { get; }
 
-    public Player(string Name, string Gender, World.World World)
+    public Player(string Name, string Gender, World.World World, Inventory.Inventory Inventory)
     {
         this.Name = Name;
         this.Gender = Gender;
@@ -19,6 +20,7 @@ public class Player
         this.X = 0;
         this.Y = 0;
         this.World = World;
+        this.Inventory = Inventory;
     }
     
     public string GetName() { return Name; }

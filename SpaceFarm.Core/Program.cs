@@ -1,5 +1,6 @@
 using System;
 using SpaceFarm.Entities;
+using SpaceFarm.Inventory;
 using SpaceFarm.World;
 
 namespace SpaceFarm;
@@ -9,54 +10,17 @@ public class Program
     public static void Main()
     {
         SpaceFarm.World.World World = new SpaceFarm.World.World();
-        SpaceFarm.Entities.Player player1= new Player("pppp", "woman", World);
+        SpaceFarm.Inventory.Inventory Inventory1 = new SpaceFarm.Inventory.Inventory();
+        SpaceFarm.Inventory.Inventory Inventory2 = new SpaceFarm.Inventory.Inventory();
+        SpaceFarm.Entities.Player Player1= new Player("pppp", "woman", World, Inventory1);
+        SpaceFarm.Entities.Player Player2= new Player("pppp", "woman", World, Inventory2);
 
-        player1.GetX();
-        player1.GetY();
-
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        player1.Move(Direction.Right);
-        Console.WriteLine(player1.GetX() + "|" + player1.GetY());
+        Player1.Inventory.AddItem(ItemID.Wood, 8);
+        Player2.Inventory.AddItem(ItemID.Wood, 10);
         
-        player1.Move(Direction.Down);
-        player1.Move(Direction.Down);
-        player1.Move(Direction.Down);
-        player1.Move(Direction.Down);
-        player1.Move(Direction.Down);
-        player1.Move(Direction.Down);
-        player1.Move(Direction.Down);
-        player1.Move(Direction.Down);
-        player1.Move(Direction.Down);
-        player1.Move(Direction.Down);
-        player1.Move(Direction.Down);
-        player1.Move(Direction.Down);
-        player1.Move(Direction.Down);
-        player1.Move(Direction.Down);
-        player1.Move(Direction.Down);
-        player1.Move(Direction.Down);
-        player1.Move(Direction.Down);
-        player1.Move(Direction.Down);
-        Console.WriteLine(player1.GetX() + "|" + player1.GetY());
+        Player1.Inventory.enter();
+        Player2.Inventory.enter();
+
 
     }
 }

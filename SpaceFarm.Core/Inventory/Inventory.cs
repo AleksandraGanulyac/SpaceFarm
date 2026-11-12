@@ -4,6 +4,16 @@ public class Inventory
 {
     private Dictionary<ItemID, int> PlayerInventory = new Dictionary<ItemID, int>();
 
+    public void enter()
+    {
+        foreach (var item in PlayerInventory)
+        {
+            
+            Console.WriteLine($"{item.Key}: {item.Value}");
+        }
+        Console.WriteLine();
+    }
+
     public bool AddItem(ItemID id, int amount)
     {
         if (amount > 0)
@@ -41,4 +51,5 @@ public class Inventory
         }
         return false;
     }
+    
 }
