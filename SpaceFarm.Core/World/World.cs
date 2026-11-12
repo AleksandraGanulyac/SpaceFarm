@@ -2,7 +2,7 @@ namespace SpaceFarm.World;
 
 public class World //игровая карта
 {
-    private static string StrWorld = "GGGGGGGGGGGGGGGGGGGG" +
+    private const string StrWorld = "GGGGGGGGGGGGGGGGGGGG" +
                                      "GGGGGGGGGGGGGGGGGGGG" +
                                      "GGGGWWWWGGGGGGGGGGGG" +
                                      "GGGGWWWWGGGGGGSSGGGG" +
@@ -78,7 +78,7 @@ public class World //игровая карта
         {
             return true;
         }
-        return false;
+        return  false;
     }
     
 }

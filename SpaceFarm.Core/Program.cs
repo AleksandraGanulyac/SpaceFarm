@@ -8,15 +8,55 @@ public class Program
 {
     public static void Main()
     {
-        SpaceFarm.World.World world = new SpaceFarm.World.World();
+        SpaceFarm.World.World World = new SpaceFarm.World.World();
+        SpaceFarm.Entities.Player player1= new Player("pppp", "woman", World);
 
-        Console.WriteLine(world.CanMoveTo(0, 0));    // True
-        Console.WriteLine(world.CanMoveTo(4, 2));    // False — вода
-        Console.WriteLine(world.CanMoveTo(14, 3));   // False — камень
-        Console.WriteLine(world.CanMoveTo(5, 7));    // True — почва
-        Console.WriteLine(world.CanMoveTo(-1, 0));   // False
-        Console.WriteLine(world.CanMoveTo(20, 5));  // False
+        player1.GetX();
+        player1.GetY();
+
+        player1.Move(Direction.Right);
+        player1.Move(Direction.Right);
+        player1.Move(Direction.Right);
+        player1.Move(Direction.Right);
+        player1.Move(Direction.Right);
+        player1.Move(Direction.Right);
+        player1.Move(Direction.Right);
+        player1.Move(Direction.Right);
+        player1.Move(Direction.Right);
+        player1.Move(Direction.Right);
+        player1.Move(Direction.Right);
+        player1.Move(Direction.Right);
+        player1.Move(Direction.Right);
+        player1.Move(Direction.Right);
+        player1.Move(Direction.Right);
+        player1.Move(Direction.Right);
+        player1.Move(Direction.Right);
+        player1.Move(Direction.Right);
+        player1.Move(Direction.Right);
+        player1.Move(Direction.Right);
+        player1.Move(Direction.Right);
+        player1.Move(Direction.Right);
+        Console.WriteLine(player1.GetX() + "|" + player1.GetY());
         
+        player1.Move(Direction.Down);
+        player1.Move(Direction.Down);
+        player1.Move(Direction.Down);
+        player1.Move(Direction.Down);
+        player1.Move(Direction.Down);
+        player1.Move(Direction.Down);
+        player1.Move(Direction.Down);
+        player1.Move(Direction.Down);
+        player1.Move(Direction.Down);
+        player1.Move(Direction.Down);
+        player1.Move(Direction.Down);
+        player1.Move(Direction.Down);
+        player1.Move(Direction.Down);
+        player1.Move(Direction.Down);
+        player1.Move(Direction.Down);
+        player1.Move(Direction.Down);
+        player1.Move(Direction.Down);
+        player1.Move(Direction.Down);
+        Console.WriteLine(player1.GetX() + "|" + player1.GetY());
 
     }
 }

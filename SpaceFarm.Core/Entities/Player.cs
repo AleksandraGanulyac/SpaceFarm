@@ -1,44 +1,48 @@
+using SpaceFarm.World;
+
 namespace SpaceFarm.Entities;
 
 public class Player
 {
-    private string name;
-    private string gender;
-    private int money;
-    private int x;
-    private int y;
+    private string Name;
+    private string Gender;
+    private int Money;
+    private int X;
+    private int Y;
+    private  SpaceFarm.World.World World { get; }
 
-    public Player(string name, string gender)
+    public Player(string Name, string Gender, World.World World)
     {
-        this.name = name;
-        this.gender = gender;
-        this.money = 100;
-        this.x = 0;
-        this.y = 0;
+        this.Name = Name;
+        this.Gender = Gender;
+        this.Money = 100;
+        this.X = 0;
+        this.Y = 0;
+        this.World = World;
     }
     
-    public string GetName() { return name; }
+    public string GetName() { return Name; }
 
-    public string GetGender()  { return gender; }
+    public string GetGender()  { return Gender; }
 
-    public int GetMoney() { return money; }
+    public int GetMoney() { return Money; }
 
-    public int GetX()  { return x; }
-    public int GetY()  { return y; }
+    public int GetX()  { return X; }
+    public int GetY()  { return Y; }
     
     public void AddMoney(int amount)
     {
         if (amount > 0)
         {
-            this.money += amount;
+            this.Money += amount;
         }
     }
     
     public bool SpendMoney(int amount)
     {
-        if(amount > 0 && this.money >= amount)
+        if(amount > 0 && this.Money >= amount)
         {
-            this.money -= amount;
+            this.Money -= amount;
             return true;
         }
 
@@ -50,17 +54,45 @@ public class Player
         switch (direction)
         {
             case Direction.Up:
-                this.y -= 1;
-                return true;
+                if(World.CanMoveTo(X, Y-1))
+                {
+                    this.Y -= 1;
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             case Direction.Down:
-                this.y += 1;
-                return true;
+                if(World.CanMoveTo(X, Y+1))
+                {
+                    this.Y += 1;
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             case Direction.Left:
-                this.x -= 1;
-                return true;
+                if (World.CanMoveTo(X-1, Y))
+                {
+                    this.X -= 1;
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             case Direction.Right:
-                this.x += 1;
-                return true;
+                if (World.CanMoveTo(X+1, Y))
+                {
+                    this.X += 1;
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             default:
                 return false;
             
