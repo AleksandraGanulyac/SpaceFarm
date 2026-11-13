@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace SpaceFarm.Inventory;
 
 public class ItemCatalog
