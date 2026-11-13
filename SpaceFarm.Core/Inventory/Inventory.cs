@@ -5,7 +5,7 @@ namespace SpaceFarm.Inventory;
 
 public class Inventory
 {
-    private Dictionary<ItemID, int> PlayerInventory = new Dictionary<ItemID, int>();
+    public Dictionary<ItemID, int> PlayerInventory { get; } = new Dictionary<ItemID, int>();
 
     public void enter()
     {

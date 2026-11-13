@@ -1,7 +1,15 @@
+using SpaceFarm.Farming;
+using SpaceFarm.Inventory;
+
 namespace SpaceFarm.World;
 
 public class Tile //отдельная клетка карты
 {
+    
+    public Tile(TileType Type)
+    {
+        this.Type = Type;
+    }
     public TileType Type { get; private set;}
 
     public bool IsWalkable
@@ -19,8 +27,16 @@ public class Tile //отдельная клетка карты
             //можно ли по блоку ходить?
         }
     }
-    public Tile(TileType type)
+
+    public bool IsDigUp //Можно ли блок вскопать
     {
-        this.Type = type;
+        get
+        {
+            return Type switch
+            {
+                TileType.Grass => true,
+                _ => false
+            };
+        }
     }
 }

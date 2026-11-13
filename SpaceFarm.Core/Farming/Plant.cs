@@ -5,18 +5,20 @@ namespace SpaceFarm.Farming;
 
 public class Plant
 {
-    private ItemID Type;
+    public ItemID Type { get;}
     private int Stage;
     private TimeSpan PastTense;//Сколько времени прошло на текущей стадии
 //Сколько поливов должно быть
     private int IrrigationStatus; //Сколько поливов прошло
+    private int x;
+    private int y;
 
-    public Plant(ItemID Type, TimeSpan PastTense, int IrrigationStatus)
+    public Plant(ItemID Type)
     {
         this.Type = Type;
         Stage = 0;
-        this.PastTense = PastTense;
-        this.IrrigationStatus = IrrigationStatus;
+        PastTense = TimeSpan.Zero;
+        IrrigationStatus = 0;
     }
 
     public bool CanChangeStage()

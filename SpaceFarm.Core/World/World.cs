@@ -1,3 +1,5 @@
+using SpaceFarm.Inventory;
+
 namespace SpaceFarm.World;
 
 public class World //игровая карта
@@ -17,13 +19,13 @@ public class World //игровая карта
                                      "GGGGGGGGGGGGGGGGGGGG" +
                                      "GGGGGGGGGGGGGGGGGGGG" +
                                      "GGGGGGGGGGGGGGGGGGGG";
-    private const int WIDTH = 20;
-    private const int HEIGHT = 15;
-    private Tile[,] Tiles { get;  } = EnterTiles(StrWorld);
+    public const int WIDTH = 20;
+    public const int HEIGHT = 15;
+    public static object[,] Tiles { get;  } = EnterTiles(StrWorld);
 
-    private static Tile[,] EnterTiles(string StrWorld)
+    private static object[,] EnterTiles(string StrWorld)
     {
-        Tile[,] Tiles = new Tile[HEIGHT, WIDTH];
+        object[,] Tiles = new Tile[HEIGHT, WIDTH];
         int symb = 0;
         for (int i = 0; i < HEIGHT; i++)
         {
@@ -57,7 +59,7 @@ public class World //игровая карта
         return Tiles;
     }
     
-    public Tile GetTileAt(int x, int y)
+    public object GetTileAt(int x, int y)
     {
         return Tiles[y, x];
     }
@@ -74,10 +76,18 @@ public class World //игровая карта
 
     public bool CanMoveTo(int x, int y)
     {
-        if (IsInsideMap(x, y) && Tiles[y, x].IsWalkable)
+        if (IsInsideMap(x, y))
         {
-            return true;
+            if (Tiles[y, x] is Farming.Plant)
+            {
+                return true;
+            }
+            else if (Tiles[y, x] is Tile tile/*переменная*/)
+            {
+                return tile.IsWalkable;
+            }
         }
+        
         return  false;
     }
     
