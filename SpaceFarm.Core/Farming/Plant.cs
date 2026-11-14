@@ -27,7 +27,7 @@ public class Plant
 
     public bool CanChangeStage()
     {
-        if (Stage < 6)
+        if (Stage < 5)
         {
             if (IrrigationStatus == PlantCatalog.Plants[Type].WaterPerStage && Time())
             {

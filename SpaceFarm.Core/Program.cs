@@ -9,12 +9,12 @@ namespace SpaceFarm;
 
 public class Program
 {
-    public static void Main()
+    public static async Task Main()
     {
         PlantCatalog plantCatalog = new PlantCatalog();
         Stopwatch watch = Stopwatch.StartNew();
         Timer Timer = new Timer(plantCatalog);
-        Timer.checkTimer();
+        _ = Task.Run(() => Timer.checkTimer());//чтобы не ждать завершения выполнения
         SpaceFarm.World.World World = new SpaceFarm.World.World();
         SpaceFarm.Inventory.Inventory Inventory1 = new SpaceFarm.Inventory.Inventory();
         SpaceFarm.Inventory.Inventory Inventory2 = new SpaceFarm.Inventory.Inventory();
