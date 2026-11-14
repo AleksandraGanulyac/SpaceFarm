@@ -7,7 +7,6 @@ namespace SpaceFarm.Farming;
 
 public class PlantCatalog
 {
-    
     public static IReadOnlyDictionary<ItemID, (ItemID HarvestID, TimeSpan[] StageGrowthTime, int WaterPerStage, int MinHarvest, int MaxHarvest)> Plants { get; } =
         new Dictionary<ItemID, (ItemID HarvestID, TimeSpan[] StageGrowthTime, int WaterPerStage, int MinHarvest, int MaxHarvest)>
         {
@@ -147,4 +146,7 @@ public class PlantCatalog
                 TimeSpan.FromMinutes(15)
             }, 1, 4, 6),   
         };
+    
+    public Dictionary<(int, int), ItemID> GrowingPlants = new Dictionary<(int, int), ItemID>{};
+    
 }

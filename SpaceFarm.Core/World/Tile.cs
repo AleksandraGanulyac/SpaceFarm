@@ -35,6 +35,9 @@ public class Tile //отдельная клетка карты
             return Type switch
             {
                 TileType.Grass => true,
+                TileType.Soil => false,
+                TileType.Stone => false,
+                TileType.Water => false,
                 _ => false
             };
         }

@@ -25,7 +25,7 @@ public class World //игровая карта
 
     private static object[,] EnterTiles(string StrWorld)
     {
-        object[,] Tiles = new Tile[HEIGHT, WIDTH];
+        object[,] Tiles = new object[WIDTH, HEIGHT];
         int symb = 0;
         for (int i = 0; i < HEIGHT; i++)
         {
@@ -34,19 +34,19 @@ public class World //игровая карта
                     switch (StrWorld[symb])
                     {
                         case 'G':
-                            Tiles[i, j] = new Tile(TileType.Grass);
+                            Tiles[j, i] = new Tile(TileType.Grass);
                             symb++;
                             break;
                         case 'W':
-                            Tiles[i, j] = new Tile(TileType.Water);
+                            Tiles[j, i] = new Tile(TileType.Water);
                             symb++;
                             break;
                         case 'S':
-                            Tiles[i, j] = new Tile(TileType.Stone);
+                            Tiles[j, i] = new Tile(TileType.Stone);
                             symb++;
                             break;
                         case 'D':
-                            Tiles[i, j] = new Tile(TileType.Soil);
+                            Tiles[j, i] = new Tile(TileType.Soil);
                             symb++;
                             break;
                         default:
@@ -61,7 +61,7 @@ public class World //игровая карта
     
     public object GetTileAt(int x, int y)
     {
-        return Tiles[y, x];
+        return Tiles[x, y];
     }
 
     private bool IsInsideMap(int x, int y)
@@ -78,11 +78,11 @@ public class World //игровая карта
     {
         if (IsInsideMap(x, y))
         {
-            if (Tiles[y, x] is Farming.Plant)
+            if (Tiles[x, y] is Farming.Plant)
             {
                 return true;
             }
-            else if (Tiles[y, x] is Tile tile/*переменная*/)
+            else if (Tiles[x, y] is Tile tile/*переменная*/)
             {
                 return tile.IsWalkable;
             }

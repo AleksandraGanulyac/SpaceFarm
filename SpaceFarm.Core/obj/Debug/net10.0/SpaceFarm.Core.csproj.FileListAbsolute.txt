@@ -12,3 +12,4 @@
 /Users/aleksandra/Desktop/Игра C#/SpaceFarm/SpaceFarm.Core/bin/Debug/net10.0/SpaceFarm.Core
 /Users/aleksandra/Desktop/Игра C#/SpaceFarm/SpaceFarm.Core/bin/Debug/net10.0/SpaceFarm.Core.runtimeconfig.json
 /Users/aleksandra/Desktop/Игра C#/SpaceFarm/SpaceFarm.Core/obj/Debug/net10.0/SpaceFarm.Core.genruntimeconfig.cache
+/Users/aleksandra/Desktop/Игра C#/SpaceFarm/SpaceFarm.Core/obj/Debug/net10.0/SpaceFarm.Core.sourcelink.json

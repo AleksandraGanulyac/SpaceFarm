@@ -1,22 +1,26 @@
 using System;
+using System.Diagnostics;
 using SpaceFarm.Inventory;
 
 namespace SpaceFarm.Farming;
 
 public class Plant
 {
+    private readonly Stopwatch _watch;
+ 
     public ItemID Type { get;}
-    private int Stage;
+    public int Stage;
     private TimeSpan PastTense;//Сколько времени прошло на текущей стадии
+
+    private TimeSpan LastCheck;
 //Сколько поливов должно быть
     private int IrrigationStatus; //Сколько поливов прошло
-    private int x;
-    private int y;
-
-    public Plant(ItemID Type)
+    public Plant(ItemID Type, Stopwatch watch)
     {
+        _watch = watch;
         this.Type = Type;
         Stage = 0;
+        LastCheck = _watch.Elapsed;
         PastTense = TimeSpan.Zero;
         IrrigationStatus = 0;
     }
@@ -39,6 +43,7 @@ public class Plant
         if (IrrigationStatus < PlantCatalog.Plants[Type].WaterPerStage)
         {
             IrrigationStatus++;
+            Console.WriteLine("Irrigation status: {0}", IrrigationStatus);
             return true;
         }
         return false;
@@ -72,4 +77,12 @@ public class Plant
 
         return false;
     }
+
+    public TimeSpan TimeCounter()
+    {
+        PastTense += _watch.Elapsed - LastCheck;
+        LastCheck =  _watch.Elapsed;
+        return  PastTense;
+    }
+    
 }
