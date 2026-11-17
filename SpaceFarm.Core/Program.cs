@@ -3,6 +3,7 @@ using System.Diagnostics;
 using SpaceFarm.Entities;
 using SpaceFarm.Farming;
 using SpaceFarm.Inventory;
+using SpaceFarm.Shop;
 using SpaceFarm.World;
 
 namespace SpaceFarm;
@@ -17,17 +18,35 @@ public class Program
         _ = Task.Run(() => Timer.checkTimer());//чтобы не ждать завершения выполнения
         SpaceFarm.World.World World = new SpaceFarm.World.World();
         SpaceFarm.Inventory.Inventory Inventory1 = new SpaceFarm.Inventory.Inventory();
-        SpaceFarm.Inventory.Inventory Inventory2 = new SpaceFarm.Inventory.Inventory();
         SpaceFarm.Farming.FarmingSystem FarmingSystem1 = new FarmingSystem(watch, plantCatalog);
-        SpaceFarm.Farming.FarmingSystem FarmingSystem2 = new FarmingSystem(watch, plantCatalog);
-        SpaceFarm.Entities.Player Player1= new Player("pppp", "woman", World, Inventory1, FarmingSystem1);
-        SpaceFarm.Entities.Player Player2= new Player("pppp", "woman", World, Inventory2, FarmingSystem2);
+        Shop.Buy Buy = new Buy();
+        Shop.Sell Sell = new Sell();
+        SpaceFarm.Entities.Player Player1= new Player("pppp", "woman", World, Inventory1, FarmingSystem1, Buy, Sell);
         FarmingSystem1.Player = Player1;
-        FarmingSystem2.Player = Player2;
-
+        Buy.Player = Player1;
+        Sell.Player = Player1;
         
-
         
+        Player1.Buy.BuyGoods(ItemID.MoonPumpkinSeed, 2);
+        Console.WriteLine(Player1.GetMoney());
+        Inventory1.enter();
+        
+        Player1.Buy.BuyGoods(ItemID.CometCoralSeed, 2);
+        Console.WriteLine(Player1.GetMoney());
+        Inventory1.enter();
+        
+        Player1.Sell.SellItems(ItemID.MoonPumpkinSeed, 1);
+        Console.WriteLine(Player1.GetMoney());
+        Inventory1.enter();
+        
+        Player1.Sell.SellItems(ItemID.CometCoralSeed, 1);
+        Console.WriteLine(Player1.GetMoney());
+        Inventory1.enter();
+        
+        Player1.Sell.SellItems(ItemID.MoonPumpkinSeed, 10);
+        Console.WriteLine(Player1.GetMoney());
+        Inventory1.enter();
+
 
     }
 }

@@ -12,8 +12,11 @@ public class Player
     private  SpaceFarm.World.World World { get; }
     public SpaceFarm.Inventory.Inventory Inventory { get; }
     public SpaceFarm.Farming.FarmingSystem FarmingSystem { get; }
+    
+    public Shop.Buy Buy { get; }
+    public Shop.Sell Sell { get; }
 
-    public Player(string Name, string Gender, World.World World, Inventory.Inventory Inventory, Farming.FarmingSystem FarmingSystem)
+    public Player(string Name, string Gender, World.World World, Inventory.Inventory Inventory, Farming.FarmingSystem FarmingSystem, Shop.Buy Buy, Shop.Sell Sell)
     {
         this.Name = Name;
         this.Gender = Gender;
@@ -23,6 +26,8 @@ public class Player
         this.World = World;
         this.Inventory = Inventory;
         this.FarmingSystem = FarmingSystem;
+        this.Buy = Buy;
+        this.Sell = Sell;
     }
     
     public string GetName() { return Name; }

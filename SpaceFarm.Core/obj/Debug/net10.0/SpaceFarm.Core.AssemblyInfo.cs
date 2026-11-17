@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SpaceFarm.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f6d22b87bae0a5467b5cb2e2dedcbe03b4eb4e1d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+213ce4d713b6821809fe759ed2b2684877f3f497")]
 [assembly: System.Reflection.AssemblyProductAttribute("SpaceFarm.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SpaceFarm.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

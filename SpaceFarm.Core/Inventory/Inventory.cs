@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using SpaceFarm.Entities;
 
 namespace SpaceFarm.Inventory;
 
@@ -24,12 +25,16 @@ public class Inventory
             if (PlayerInventory.ContainsKey(id))
             {
                 PlayerInventory[id] += amount;
+                return true;
             }
             else
             {
-                PlayerInventory.Add(id, amount);
+                if (PlayerInventory.Count < 8)
+                {
+                    PlayerInventory.Add(id, amount);
+                    return true;
+                }
             }
-            return true;
         }
         return false;
     }
