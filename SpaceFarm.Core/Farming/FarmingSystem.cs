@@ -24,6 +24,23 @@ public class FarmingSystem
      * Собрать
      */
 
+    public bool PickUp(int x, int y)
+    {
+        if (Player.Inventory.PlayerInventory.ContainsKey(ItemID.PickAxe))
+        {
+            if (World.World.Tiles[x, y] is Tile tile)
+            {
+                if (tile.Type == TileType.Stone)
+                {
+                    World.World.Tiles[x, y] = new Tile(TileType.Grass);
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
     public bool DigUp(int x, int y)
     {
         if (Player.Inventory.PlayerInventory.ContainsKey(ItemID.Hoe))

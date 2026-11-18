@@ -50,6 +50,7 @@ public class ItemCatalog
         [ItemID.Hoe] = ("Hoe", 100, 30),
         [ItemID.WateringCan] = ("Watering Can", 120, 36),
         [ItemID.HarvestingTool] = ("Harvesting Tool", 150, 45),
+        [ItemID.PickAxe] = ("Pick Axe", 150000000, 1),
     };
 
     public static string GetName(ItemID id)

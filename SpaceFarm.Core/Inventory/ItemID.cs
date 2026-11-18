@@ -44,5 +44,6 @@ public enum ItemID
     //Инструменты
     Hoe,
     WateringCan,
-    HarvestingTool
+    HarvestingTool,
+    PickAxe
 }
