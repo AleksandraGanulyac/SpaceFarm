@@ -13,3 +13,20 @@
 /Users/aleksandra/Desktop/Игра C#/SpaceFarm/SpaceFarm.Core/bin/Debug/net10.0/SpaceFarm.Core.runtimeconfig.json
 /Users/aleksandra/Desktop/Игра C#/SpaceFarm/SpaceFarm.Core/obj/Debug/net10.0/SpaceFarm.Core.genruntimeconfig.cache
 /Users/aleksandra/Desktop/Игра C#/SpaceFarm/SpaceFarm.Core/obj/Debug/net10.0/SpaceFarm.Core.sourcelink.json
+C:\Users\user\source\repos\AleksandraGanulyac\SpaceFarm\SpaceFarm.Core\bin\Debug\net10.0\SpaceFarm.Core.exe
+C:\Users\user\source\repos\AleksandraGanulyac\SpaceFarm\SpaceFarm.Core\bin\Debug\net10.0\SpaceFarm.Core.deps.json
+C:\Users\user\source\repos\AleksandraGanulyac\SpaceFarm\SpaceFarm.Core\bin\Debug\net10.0\SpaceFarm.Core.runtimeconfig.json
+C:\Users\user\source\repos\AleksandraGanulyac\SpaceFarm\SpaceFarm.Core\bin\Debug\net10.0\SpaceFarm.Core.runtimeconfig.dev.json
+C:\Users\user\source\repos\AleksandraGanulyac\SpaceFarm\SpaceFarm.Core\bin\Debug\net10.0\SpaceFarm.Core.dll
+C:\Users\user\source\repos\AleksandraGanulyac\SpaceFarm\SpaceFarm.Core\bin\Debug\net10.0\SpaceFarm.Core.pdb
+C:\Users\user\source\repos\AleksandraGanulyac\SpaceFarm\SpaceFarm.Core\obj\Debug\net10.0\SpaceFarm.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\AleksandraGanulyac\SpaceFarm\SpaceFarm.Core\obj\Debug\net10.0\SpaceFarm.Core.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\AleksandraGanulyac\SpaceFarm\SpaceFarm.Core\obj\Debug\net10.0\SpaceFarm.Core.AssemblyInfo.cs
+C:\Users\user\source\repos\AleksandraGanulyac\SpaceFarm\SpaceFarm.Core\obj\Debug\net10.0\SpaceFarm.Core.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\AleksandraGanulyac\SpaceFarm\SpaceFarm.Core\obj\Debug\net10.0\SpaceFarm.Core.sourcelink.json
+C:\Users\user\source\repos\AleksandraGanulyac\SpaceFarm\SpaceFarm.Core\obj\Debug\net10.0\SpaceFarm.Core.dll
+C:\Users\user\source\repos\AleksandraGanulyac\SpaceFarm\SpaceFarm.Core\obj\Debug\net10.0\refint\SpaceFarm.Core.dll
+C:\Users\user\source\repos\AleksandraGanulyac\SpaceFarm\SpaceFarm.Core\obj\Debug\net10.0\SpaceFarm.Core.pdb
+C:\Users\user\source\repos\AleksandraGanulyac\SpaceFarm\SpaceFarm.Core\obj\Debug\net10.0\SpaceFarm.Core.genruntimeconfig.cache
+C:\Users\user\source\repos\AleksandraGanulyac\SpaceFarm\SpaceFarm.Core\obj\Debug\net10.0\ref\SpaceFarm.Core.dll
+C:\Users\user\source\repos\AleksandraGanulyac\SpaceFarm\SpaceFarm.Core\obj\Debug\net10.0\SpaceFar.7523E8B7.Up2Date
