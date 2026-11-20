@@ -8,4 +8,8 @@
         <RootNamespace>SpaceFarm.Core</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Sprite\MenuElements\" />
+    </ItemGroup>
+
 </Project>
